@@ -13,7 +13,7 @@ ModeloArbol<-rpart(churn ~ .,data=Entrenamiento,parms=list(split="information"))
 
 # PASO 3:  Predice Desafiliacion en datos de TEST
 # ---------------------------------------------------------------------------
-Prediccion <- predict(ModeloArbol, Test,type="class") # Predicccion en Test
+Prediccion <- predict(ModeloArbol, Test[-6],type="class") # Predicccion en Test
 Prediccion
 
 # PASO 4: Crea Grafico
